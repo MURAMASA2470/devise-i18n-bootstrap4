@@ -237,6 +237,3 @@ bundle exec rails server
 ```ruby:app/controllers/application_controller.rb
 before_action :authenticate_user!
 ```
-
-
-以上です。ありがとうございましたm(_ _)m
