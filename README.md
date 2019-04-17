@@ -1,4 +1,4 @@
-#実行環境
+# 実行環境
 
 OS...MacOS(High Sierra)
 ruby...2.5.0
@@ -6,7 +6,7 @@ bundler...1.16.3
 rails...5.2.1
 devise...4.5.0
 
-#deviseの導入
+# deviseの導入
 
 Gemfileに記述します
 
@@ -29,7 +29,7 @@ bundle install を実行
 $ bundle install 
 ```
 
-#deviseの設定ファイルの生成
+# deviseの設定ファイルの生成
 
 deviseの設定ファイルを生成します
 
@@ -104,11 +104,11 @@ root to: "home#index"
 <% end %>
 ```
 
-#deviseのviewを生成
+# deviseのviewを生成
 
 普通にdeviseのviewを生成してしまうと`devise`の`Bootstrap4`化が難しいため、下の方にある[deviseの日本語化](#deviseの日本語化)で一緒に説明します
 
-#deviseのmodelを生成
+# deviseのmodelを生成
 
 今回はモデル名を`user`します
 
@@ -124,7 +124,7 @@ migrateを実行して、DBに反映します
 $ bundle exec rails db:migrate
 ```
 
-#Bootstrap4の実装
+# Bootstrap4の実装
 
 共通`CSS`の`application.css`を`application.scss`にリネームします
 
@@ -148,7 +148,7 @@ $ mv app/assets/stylesheets/application.css app/assets/stylesheets/application.s
 これで`Bootstrap`の実装は完了しました
 次にdeviseの日本語化に入ります
 
-#deviseの日本語化
+# deviseの日本語化
 
 まずここからBootstrap4化されている`devise`のviewと、`devise`の日本語化ファイルをダウンロードしてきます
 [https://github.com/MURAMASA2470/devise-i18n-bootstrap4/](https://github.com/MURAMASA2470/devise-i18n-bootstrap4/)
@@ -206,14 +206,14 @@ config.i18n.default_locale = :jack_o_lantern:
 
 下の[おまけ](#おまけ)を実装することにより、より本格的なユーザ認証になります
 
-#サーバー再起動で確認
+# サーバー再起動で確認
 
 ```:コマンドライン
 bundle exec rails server
 ```
 
 #おまけ
-##ログアウトボタンの設置
+## ログアウトボタンの設置
 
 共通`Layout`の`body`内に以下を追記します
 
@@ -227,7 +227,7 @@ bundle exec rails server
 
 
 
-##ログインしていないときの処理
+## ログインしていないときの処理
 
 以下を`ApplicationController`クラス内に追記します
 ログインされていなかったら、ログイン画面に飛ぶようにします
